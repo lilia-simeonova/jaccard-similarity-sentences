@@ -14,15 +14,16 @@ Normalize the words into every sentence
 
 **************************************************************************/
 
-exports.isStopWord =  function (word) {
+var isStopWord = function (word) {
 	for(var i in stopWords) {
 		if(stopWords[i] === word) {
 			return true;
 		}
 	}
+	return false;
 }
 
-exports.removeEqualWords = function (words) {
+var removeEqualWords = function (words) {
 	for(var i = 0; i < words.length; i++) {
 		for(var j = i + 1; j < words.length; j++) {
 			if(words[i] === words[j]) {
@@ -36,7 +37,7 @@ exports.removeEqualWords = function (words) {
 	return words;
 }
 
-exports.normalizing = function (sentence) {
+var normalizing = function (sentence) {
 	var words = tokenizer.tokenize(sentence);
 	for(var i in words) {
 		if(isStopWord(words[i])) {
@@ -47,19 +48,20 @@ exports.normalizing = function (sentence) {
 	return words;
 }
 
-exports.exists = function(word, array) {
+var exists = function(word, array) {
 	for(var i = 0; i < array.length; i++) {
 		if(array[i] === word) {
 			return true;
 		}
 	}
+	return false;
 }
 
-exports.identicalWordsInSentence =  function(list1, list2) {
+var identicalWordsInSentence =  function(list1, list2) {
 	var identical = [];
 	for(var i = 0; i < list1.length; i ++) {
 		for(var j = 0; j < list2.length; j++) { 
-			if(list1[i] === list2[j] && !(exist(list1[i], identical))) {
+			if(list1[i] === list2[j] && !(exists(list1[i], identical))) {
 				identical.push(list1[i]);
 			}
 		}
@@ -72,12 +74,12 @@ exports.jaccardSimilarity =  function (sentence1, sentence2) {
 	var b = normalizing(sentence2);
 	var identical = identicalWordsInSentence(a, b);
 	var result = (identical.length / (a.length + b.length - identical.length));
-	console.log('my result is:', result);
+	return result;
 }
 
 
 
 // var sentence1 = 'A directive is a class with directive metadata.';
 // var sentence2 = 'In TypeScript, apply the @Directive decorator to attach metadata to the class.';
-
-// jaccardSimilarity(sentence1, sentence2);
+// 
+// console.log(exports.jaccardSimilarity(sentence1, sentence2));
