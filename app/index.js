@@ -76,10 +76,3 @@ exports.jaccardSimilarity =  function (sentence1, sentence2) {
 	var result = (identical.length / (a.length + b.length - identical.length));
 	return result;
 }
-
-
-
-var sentence1 = 'This is one example';
-var sentence2 = "This is another example";
-
-console.log(exports.jaccardSimilarity(sentence1, sentence2));
