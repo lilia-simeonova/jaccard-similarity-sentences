@@ -1,5 +1,5 @@
 {
-  "name": "jaccard-index",
+  "name": "jaccard-similarity-sentences",
   "version": "1.0.0",
   "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences",
   "main": "app/index.js",
