@@ -4,6 +4,7 @@ The Jaccard Index itself calculates the similarity/diversity of two sample sets.
 
 This module measure the similarity between senteces, based on the words in common (some of the stop words are excluded). 
 
+The result should be between 0 and 1.
 
 [<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaef5aa86949f49e7dc6b9c8c3dd8b233332c9e7">](https://en.wikipedia.org/wiki/Jaccard_index)
 
@@ -16,7 +17,7 @@ You can find more information about the algorithm on [Wikipedia](https://en.wiki
 
 "This is another sentence."
 
-**Result**: 0.66%
+**Result**: 0.6
 
 ##Pre-installation 
 
@@ -33,8 +34,17 @@ npm install natural
 ##Installation
 
 ##Usage
+```
+var jaccard = require ('jaccard-similarity-sentences');
 
+var sentence1 = 'This is one sentence.';
+var sentence2 = 'This is another sentence.';
 
+var measure = jaccard.jaccardSimilarity(sentence1, sentence2);
+
+console.log(measure);
+
+```
 
 
 # License
