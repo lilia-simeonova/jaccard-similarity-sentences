@@ -1,0 +1,31 @@
+{
+  "name": "jaccard-index",
+  "version": "1.0.0",
+  "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "node ./app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilia-simeonova/jaccard-index.git"
+  },
+  "keywords": [
+    "jaccard",
+    "nlp",
+    "similarity"
+  ],
+  "author": "Lilia Simeonova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lilia-simeonova/jaccard-index/issues"
+  },
+  "homepage": "https://github.com/lilia-simeonova/jaccard-index#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "natural": "^0.4.0"
+  },
+  "devDependencies": {}
+}
