@@ -1,6 +1,6 @@
 {
   "name": "jaccard-similarity-sentences",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences",
   "main": "app/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lilia-simeonova/jaccard-index.git"
+    "url": "git+https://github.com/lilia-simeonova/jaccard-similarity-sentences/"
   },
   "keywords": [
     "jaccard",
@@ -20,9 +20,9 @@
   "author": "Lilia Simeonova",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lilia-simeonova/jaccard-index/issues"
+    "url": "https://github.com/lilia-simeonova/jaccard-similarity-sentences/issues"
   },
-  "homepage": "https://github.com/lilia-simeonova/jaccard-index#readme",
+  "homepage": "https://github.com/lilia-simeonova/jaccard-similarity-sentences#readme",
   "dependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
