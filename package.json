@@ -14,7 +14,8 @@
   "keywords": [
     "jaccard",
     "nlp",
-    "similarity"
+    "similarity",
+    "sentences"
   ],
   "author": "Lilia Simeonova",
   "license": "MIT",
