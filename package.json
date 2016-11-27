@@ -4,7 +4,7 @@
   "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/lilia-simeonova/jaccard-index#readme",
   "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
     "natural": "^0.4.0"
-  }
+  },
+  "devDependencies": {}
 }
