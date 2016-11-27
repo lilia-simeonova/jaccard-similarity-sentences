@@ -79,7 +79,7 @@ exports.jaccardSimilarity =  function (sentence1, sentence2) {
 
 
 
-var sentence1 = 'A directive is a class with directive metadata.';
-var sentence2 = 'In TypeScript, apply the @Directive decorator to attach metadata to the class.';
+var sentence1 = 'This is one example';
+var sentence2 = "This is another example";
 
-//console.log(exports.jaccardSimilarity(sentence1, sentence2));
+console.log(exports.jaccardSimilarity(sentence1, sentence2));
