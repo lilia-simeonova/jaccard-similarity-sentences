@@ -1,8 +1,8 @@
 # Measuring similarity of sentences
 
-The Jaccard Index itself calculates the similarity/diversity of two sample sets. 
+The Jaccard Index itself calculates the similarity/diversity of two sample sets.
 
-This module measure the similarity between senteces, based on the words in common (some of the stop words are excluded). 
+This module measure the similarity between senteces, based on the words in common (some of the stop words are excluded).
 
 It is build on top of the ["Natural" module](https://github.com/NaturalNode/natural) - library for natural language processing.
 
@@ -26,7 +26,7 @@ You can find more information about the algorithm on [Wikipedia](https://en.wiki
 npm install jaccard-similarity-sentences
 ```
 ##Usage
-```
+```javascript
 var jaccard = require ('jaccard-similarity-sentences');
 
 var sentence1 = 'This is one sentence.';
