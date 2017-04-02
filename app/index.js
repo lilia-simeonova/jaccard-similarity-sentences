@@ -42,6 +42,7 @@ var normalizing = function (sentence) {
 	for(var i in words) {
 		if(isStopWord(words[i])) {
 			words.splice(i, 1);
+			continue;
 		}
 		words[i] = natural.PorterStemmer.stem(words[i]);
 	}
