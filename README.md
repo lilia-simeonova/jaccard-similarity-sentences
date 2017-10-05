@@ -21,11 +21,14 @@ You can find more information about the algorithm on [Wikipedia](https://en.wiki
 
 **Result**: 0.6
 
-##Installation
+## Installation
+
+```shell
+$ npm install jaccard-similarity-sentences
 ```
-npm install jaccard-similarity-sentences
-```
-##Usage
+
+## Usage
+
 ```javascript
 var jaccard = require ('jaccard-similarity-sentences');
 
