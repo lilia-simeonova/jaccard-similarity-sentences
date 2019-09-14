@@ -56,16 +56,6 @@ var identicalWordsInSentence =  function(list1, list2) {
 	return identical;
 }
 
-var jaccardSimilarity = function (sentence1, sentence2) {
-	var a = normalizing(sentence1);
-	var b = normalizing(sentence2);
-	var identical = identicalWordsInSentence(a, b);
-	var result = (identical.length / (a.length + b.length - identical.length));
-	return result;
-}
-
-console.log(jaccardSimilarity('Ik ben fantastisch', 'Ik ben cool'));
-
 exports.jaccardSimilarity =  function (sentence1, sentence2) {
 	var a = normalizing(sentence1);
 	var b = normalizing(sentence2);
