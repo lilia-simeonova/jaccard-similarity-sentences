@@ -25,7 +25,8 @@
   "homepage": "https://github.com/lilia-simeonova/jaccard-similarity-sentences#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "natural": "^0.6.3"
   },
   "devDependencies": {}
 }

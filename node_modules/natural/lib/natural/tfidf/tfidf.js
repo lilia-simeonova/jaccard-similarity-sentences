@@ -151,8 +151,9 @@ TfIdf.prototype.addFileSync = function(path, encoding, key, restoreCache) {
 TfIdf.prototype.tfidf = function(terms, d) {
     var _this = this;
 
-    if(!_.isArray(terms))
+    if(!_.isArray(terms)) {
         terms = tokenizer.tokenize(terms.toString().toLowerCase());
+    }
 
     return terms.reduce(function(value, term) {
         var idf = _this.idf(term);
@@ -163,10 +164,16 @@ TfIdf.prototype.tfidf = function(terms, d) {
 
 TfIdf.prototype.listTerms = function(d) {
     var terms = [];
-
+    var _this = this;
     for(var term in this.documents[d]) {
-        if(term != '__key')
-           terms.push({term: term, tfidf: this.tfidf(term, d)});
+      if (this.documents[d]) {
+          if(term != '__key') {
+              terms.push({"term": term, 
+                          "tf": tf(term, _this.documents[d]),
+                          "idf": _this.idf(term),
+                          "tfidf": _this.tfidf(term, d)});
+          }
+      }
     }
 
     return terms.sort(function(x, y) { return y.tfidf - x.tfidf; });
@@ -191,3 +198,19 @@ TfIdf.prototype.setTokenizer = function(t) {
         throw new Error('Expected a valid Tokenizer');
     tokenizer = t;
 };
+
+// Define a stopwords other than the default
+TfIdf.prototype.setStopwords = function(customStopwords) {
+  
+  if (!Array.isArray(customStopwords))
+    return false;
+  
+  customStopwords.forEach(stopword => {
+    if ((typeof stopword) != 'string')
+      return false;
+  });
+  
+  stopwords = customStopwords;
+  return true;
+  
+}

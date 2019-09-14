@@ -23,20 +23,6 @@ var isStopWord = function (word) {
 	return false;
 }
 
-var removeEqualWords = function (words) {
-	for(var i = 0; i < words.length; i++) {
-		for(var j = i + 1; j < words.length; j++) {
-			if(words[i] === words[j]) {
-				var head = words.slice(0,j);
-				var tail = words.slice(j+1);
-				words = head.concat(tail);
-				j = j - 1;
-			}
-		}
-	}
-	return words;
-}
-
 var normalizing = function (sentence) {
 	var words = tokenizer.tokenize(sentence);
 	for(var i in words) {
@@ -70,6 +56,16 @@ var identicalWordsInSentence =  function(list1, list2) {
 	return identical;
 }
 
+var jaccardSimilarity = function (sentence1, sentence2) {
+	var a = normalizing(sentence1);
+	var b = normalizing(sentence2);
+	var identical = identicalWordsInSentence(a, b);
+	var result = (identical.length / (a.length + b.length - identical.length));
+	return result;
+}
+
+console.log(jaccardSimilarity('Ik ben fantastisch', 'Ik ben cool'));
+
 exports.jaccardSimilarity =  function (sentence1, sentence2) {
 	var a = normalizing(sentence1);
 	var b = normalizing(sentence2);
@@ -77,3 +73,4 @@ exports.jaccardSimilarity =  function (sentence1, sentence2) {
 	var result = (identical.length / (a.length + b.length - identical.length));
 	return result;
 }
+
