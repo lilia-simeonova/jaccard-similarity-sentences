@@ -1,6 +1,6 @@
 {
   "name": "jaccard-similarity-sentences",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences, by Marcel",
   "main": "app/index.js",
   "scripts": {
