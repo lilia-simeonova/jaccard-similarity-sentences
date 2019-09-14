@@ -1,7 +1,7 @@
 {
   "name": "jaccard-similarity-sentences",
   "version": "1.0.3",
-  "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences",
+  "description": "Implements the Jaccard algorithm for finding the similarity coefficient between sentences, by Marcel",
   "main": "app/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
